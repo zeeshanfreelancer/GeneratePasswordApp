@@ -1,0 +1,65 @@
+<html>
+    <head><title>password generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,100;1,300;1,400;1,700&family=Lora:ital,wght@0,400;1,400;1,500;1,600;1,700&family=Lugrasimo&family=Varela&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="main">
+            <h1>
+                Generate a 
+                <br>
+            <span> Random password </span>
+
+            </h1>
+
+            <div class="display">
+                <input type="text"  placeholder="password" id="password"/>
+                <img onclick="copyPassword()" class="copy" src="Capture4.png" width="70px" height="70px" />
+                
+                
+            </div>
+
+            <button onclick="createPassword()"> <img class="lock" src="Capture3.png" />  <p class="span1"> Generate Password </p></button>
+
+        </div>
+
+        <script>
+            const searchBox=document.getElementById("password");
+            const lenght = 12;
+            
+
+            const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            const number = "0123456789";
+            const symbol = "@#$%^&*=-_";
+            const allChar = upperCase + lowerCase + symbol + number;
+
+            function createPassword(){
+                let password = "";
+                password += upperCase[Math.floor(Math.random() * upperCase.length) ];
+                password += lowerCase[Math.floor(Math.random() * lowerCase.length) ];
+                password += symbol[Math.floor(Math.random() * symbol.length) ];
+                password += number[Math.floor(Math.random() * number.length) ];
+
+                while(lenght > password.length){
+                    password += allChar[Math.floor(Math.random() * allChar.length) ];
+
+                }
+
+                searchBox.value=password ;
+
+            }
+
+            function copyPassword(){
+                searchBox.select();
+                document.execCommand("copy");
+                alert("passwordcopied");
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

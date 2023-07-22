@@ -1,0 +1,82 @@
+body{
+    background-color: rgb(4, 23, 63);
+}
+
+h1{
+    color: white;
+    padding-top: 100px;
+    padding-left: 100px;
+    font-size: 50px;
+    line-height: 70px;
+    font-family: Lugrasimo;
+}
+
+span{
+    color: rgb(39, 95, 39);
+    font-size: 50px;
+    border-bottom: 3px solid rgb(39, 95, 39);
+}
+
+.display{
+
+    display: flex;
+    flex-direction: 1 column;
+    background-color: white;
+    width: 700px;
+    height: 100px;
+    margin-left: 100px;
+    border-radius: 5px;
+    margin: 50px 100px;
+    justify-content: space-between;
+    padding-right: 15px;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+input{
+
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    font-size: 20px;
+    
+
+}
+
+.copy{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+}
+
+.lock{
+    width: 40px;
+
+}
+
+button{
+    margin-left: 100px;
+    padding: 10px 20px;
+    background-color: rgb(39, 95, 39) ;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    width: 300px;
+    height: 70px;
+    
+}
+
+.span1{
+    margin-top: 10px;
+    color: white;
+    padding-left: 20px;
+
+
+}
